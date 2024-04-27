@@ -21,6 +21,10 @@ function init() {
 		overprint.contentDocument.querySelector('svg').style.fill = '#00f'
 	})
 
+	colorTshirtSelect.addEventListener('chanege', function (e) {
+		console.log(e)
+	})
+
 	// document.getElementById('inputfile').addEventListener('change', function (e) {
 	// 	console.dir(document.getElementById('inputfile'))
 	// 	console.log(e)
