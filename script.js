@@ -10,6 +10,7 @@ function init() {
 	const tshirtBox = document.querySelector('.tshirtBox')
 	const overPrintNameSelect = document.querySelector('#overPrintName')
 	const overPrintColorSelect = document.querySelector('#overPrintColor')
+	const tshirtMockup = document.querySelector('.tshirtMockup')
 
 	const overprint = document.getElementById('overprint')
 
@@ -24,10 +25,15 @@ function init() {
 
 	console.log(colorTshirtSelect)
 
+	colorTshirtSelect.addEventListener('change', function (e) {
+		const colorTshirt = e.target.value
+		tshirtMockup.style.background = url(`/img/men/mockupColors/${colorTshirt}`)
+	})
+
 	overPrintColorSelect.addEventListener('change', function (e) {
 		console.log(e.target.value)
-		const color = e.target.value
-		overprint.contentDocument.querySelector('svg').style.fill = color
+		const colorOverPrint = e.target.value
+		overprint.contentDocument.querySelector('svg').style.fill = colorOverPrint
 	})
 
 	// document.getElementById('inputfile').addEventListener('change', function (e) {
