@@ -17,6 +17,7 @@ function init() {
 	overprint.addEventListener('load', function (e) {
 		console.dir(e)
 		console.log(overprint.contentDocument)
+		console.log(overprint.contentDocument.querySelector('svg'))
 		overprint.contentDocument.querySelector('svg').style.fill = '#00f'
 	})
 
