@@ -21,7 +21,7 @@ function init() {
 		overprint.contentDocument.querySelector('svg').style.fill = '#00f'
 	})
 
-	colorTshirtSelect.addEventListener('chanege', function (e) {
+	colorTshirtSelect.addEventListener('change', function (e) {
 		console.log(e)
 	})
 
