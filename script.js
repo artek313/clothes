@@ -9,20 +9,25 @@ function init() {
 	const colorTshirtSelect = document.querySelector('#colorTshirt')
 	const tshirtBox = document.querySelector('.tshirtBox')
 	const overPrintNameSelect = document.querySelector('#overPrintName')
+	const overPrintColorSelect = document.querySelector('#overPrintColor')
 
 	const overprint = document.getElementById('overprint')
 
 	console.log(overprint)
 
-	overprint.addEventListener('load', function (e) {
-		console.dir(e)
-		console.log(overprint.contentDocument)
-		console.log(overprint.contentDocument.querySelector('svg'))
-		overprint.contentDocument.querySelector('svg').style.fill = '#00f'
-	})
+	// overprint.addEventListener('load', function (e) {
+	// 	console.dir(e)
+	// 	console.log(overprint.contentDocument)
+	// 	console.log(overprint.contentDocument.querySelector('svg'))
+	// 	overprint.contentDocument.querySelector('svg').style.fill = '#00f'
+	// })
 
-	colorTshirtSelect.addEventListener('change', function (e) {
-		console.log(e)
+	console.log(colorTshirtSelect)
+
+	overPrintColorSelect.addEventListener('change', function (e) {
+		console.log(e.target.value)
+		const color = e.target.value
+		overprint.contentDocument.querySelector('svg').style.fill = color
 	})
 
 	// document.getElementById('inputfile').addEventListener('change', function (e) {
