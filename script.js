@@ -14,6 +14,9 @@ function init() {
 
 	const overprint = document.getElementById('overprint')
 
+	let kindTshirt = 'men'
+	let colorTshirt = ''
+
 	console.log(overprint)
 
 	// overprint.addEventListener('load', function (e) {
@@ -25,9 +28,16 @@ function init() {
 
 	console.log(colorTshirtSelect)
 
+	kindTshirtSelect.addEventListener('change', function (e) {
+		kindTshirt = e.target.value
+	})
+
 	colorTshirtSelect.addEventListener('change', function (e) {
-		const colorTshirt = e.target.value
-		tshirtMockup.style.background = url(`/img/men/mockupColors/${colorTshirt}`)
+		colorTshirt = e.target.value
+		const mockupImg = document.createElement('img')
+		mockupImg.setAttribute('src', `img/${kindTshirt}/mockupColors/${colorTshirt}.png`)
+		tshirtMockup.innerHTML = null
+		tshirtMockup.appendChild(mockupImg)
 	})
 
 	overPrintColorSelect.addEventListener('change', function (e) {
