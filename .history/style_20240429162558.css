@@ -1,0 +1,20 @@
+.tshirtBox {
+	position: relative;
+	width: 50%;
+}
+
+.tshirtMockup {
+	width: 100%;
+	position: relative;
+}
+.overprint {
+	width: 33%;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.tshirtMockup img {
+	width: 100%;
+}
